@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+/*
+ *  TODO: Apply the kotlin gradle plugin
+ */
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.fuzz.android.kotlin.fuzztest"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    /*
+     *  TODO: Add the kotlin directory as a source set
+     *  If you want to keep your source files seperated by language do this
+     */
+//    sourceSets {
+//        main.java.srcDirs += 'src/main/kotlin'
+//    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    /*
+     *  TODO: Import the kotlin stdlib
+     */
+    compile 'org.jetbrains.kotlin:kotlin-stdlib:1.0.0+'
+}
