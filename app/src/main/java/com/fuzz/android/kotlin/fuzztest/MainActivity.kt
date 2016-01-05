@@ -66,4 +66,8 @@ class MainActivity : AppCompatActivity() {
     private fun fakeFunction() {
         //private function define
     }
+
+    public fun fakePublicFunction() {
+        //public function that gets called
+    }
 }

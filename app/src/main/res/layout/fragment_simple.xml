@@ -10,4 +10,10 @@
         android:layout_margin="10dp"
         android:text="This is a fragment written in java, the activity is written in kotlin"/>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/secondtext"/>
+
 </LinearLayout>
