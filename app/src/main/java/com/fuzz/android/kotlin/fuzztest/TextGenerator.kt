@@ -10,3 +10,9 @@ class TextGenerator {
     }
 
 }
+
+class SecondGenerator {
+    public fun generateText(): String {
+        return "Second generator also inside TextGenerator.kt"
+    }
+}

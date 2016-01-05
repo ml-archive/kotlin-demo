@@ -17,10 +17,10 @@ public class SimpleFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         ((MainActivity)getActivity()).fakePublicFunction();
-        TextGenerator generator = new TextGenerator();
         View view = inflater.inflate(R.layout.fragment_simple, null);
-
-        ((TextView)view.findViewById(R.id.secondtext)).setText(generator.generateText());
+        TextGenerator generator = new TextGenerator();
+        SecondGenerator second = new SecondGenerator();
+        ((TextView) view.findViewById(R.id.secondtext)).setText(generator.generateText() + " " + second.generateText());
 
         return view;
     }
