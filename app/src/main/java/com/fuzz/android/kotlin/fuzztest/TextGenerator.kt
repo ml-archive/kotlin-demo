@@ -20,3 +20,7 @@ class SecondGenerator {
 fun String.duplicateString() : String {
     return "$this $this"
 }
+
+fun SecondGenerator.other() : String {
+    return "other";
+}

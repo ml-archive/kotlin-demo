@@ -26,8 +26,10 @@ public class SimpleFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_simple, null);
         TextGenerator generator = new TextGenerator();
         SecondGenerator second = new SecondGenerator();
+//        second.other();
         //TODO the following fails because this convention is a Kotlin only capability
 //        generator.generateText().duplicateString();
+        TextGeneratorKt.duplicateString(generator.generateText());
         ButterKnife.bind(this,getActivity());
         text.setText(generator.generateText() + " " + second.generateText());
 
