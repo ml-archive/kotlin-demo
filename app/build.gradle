@@ -39,4 +39,5 @@ dependencies {
      *  TODO: Import the kotlin stdlib
      */
     compile 'org.jetbrains.kotlin:kotlin-stdlib:1.0.0+'
+    compile 'com.jakewharton:butterknife:7.0.1'
 }

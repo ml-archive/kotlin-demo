@@ -16,6 +16,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        savedInstanceState?.getBoolean("") ?: false //WILL COMPILE
+        var value:Boolean
+        if (savedInstanceState != null) {
+            value = savedInstanceState.getBoolean("")
+        }
+
         val toolbar = findViewById(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
 
@@ -29,6 +36,10 @@ class MainActivity : AppCompatActivity() {
         //Otherwise same as normal java here
         fragmentTransaction.add(R.id.container, simpleFragment)
         fragmentTransaction.commit();
+
+        //TODO here is the duplicateString method working
+        val generator = TextGenerator()
+        generator.generateText().duplicateString()
     }
 
     //menu is of type Menu and will never be null

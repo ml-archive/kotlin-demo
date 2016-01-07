@@ -16,3 +16,7 @@ class SecondGenerator {
         return "Second generator also inside TextGenerator.kt"
     }
 }
+
+fun String.duplicateString() : String {
+    return "$this $this"
+}
